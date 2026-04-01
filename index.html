@@ -1,0 +1,242 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lakshmi Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #e6f7ff, #ffe6e6);
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #05465c, hsl(317, 88%, 29%));
+      color: white;
+      padding: 25px 40px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 30%;
+      border: 3px solid white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgb(113, 142, 163);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-left: 6px solid #d50707db;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      border-bottom: 3px solid #00bfff;
+      padding-bottom: 5px;
+      color: #200202;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #0993c1, #5d0534);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.button:hover {
+      background: linear-gradient(135deg, #ff4d4d, #00bfff);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2ab1dd;
+      color: white;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-flex">
+
+    <div class="left-section">
+      <img src="C:\Users\ELCOT\Downloads\profile.jpg" class="header-img">
+      <h1>Lakshmi S D</h1>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+
+  <div class="card">
+    <p>
+      Hello! I am Lakshmi, a student pursuing Artificial Intelligence & Data Science.
+      I am passionate about building projects using Python,MySQL, and web technologies.
+    </p>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="card">
+    <ul>
+      <li>
+        <b>Bachelor of Computer Science with Artificial Intelligence</b><br>
+        DRBCCC Hindu College<br>
+        Pursuing UG (2024 – 2027)
+      </li>
+
+      <br>
+
+      <li>
+        <b>Higher Secondary (HSLC)</b><br>
+        Jaya Matriculation Higher Secondary School, Thiruninravur<br>
+        Bio-Maths Group<br>
+        Percentage: 70.17%
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <h3>Programming Languages:</h3>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h3>Web Technologies:</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+
+    <h3>Databases:</h3>
+    <ul>
+      <li>MySQL</li>
+      <li>MongoDB</li>
+    </ul>
+
+    <h3>Libraries / Tools:</h3>
+    <ul>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>Matplotlib</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>E-commerce Data Analysis</h3>
+    <p>Data Analysis project using NumPy,Pandas,Matplotlib.</p>
+    <a class="button" href="https://github.com/laxsh041-ux/E-commerce-sales-analysis-" target="_blank">
+      View Project
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Google Colab Project</h3>
+    <p>Loan Approval Risk Analysis using Machine learning.</p>
+    <a class="button" href="https://colab.research.google.com/drive/1oS2eXrCTN1-jBfpdZTAYSee5hxaRxoN-?usp=sharing" target="_blank">
+      Open Colab
+    </a>
+  </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+    <p>Email: laxsh041@gmail.com</p>
+    <p>Phone: 7200265396</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lakshmi | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
