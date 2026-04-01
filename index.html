@@ -6,108 +6,195 @@
   <title>Lakshmi Portfolio</title>
 
   <style>
+    /* GLOBAL STYLES */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #e6f7ff, #ffe6e6);
+      background: linear-gradient(135deg, #e0f2f1, #fce4ec); /* Light Teal to Light Pink */
       color: #333;
+      overflow-x: hidden;
     }
 
-    /* HEADER */
+    /* HEADER SECTION */
     header {
-      background: linear-gradient(135deg, #05465c, hsl(317, 88%, 29%));
+      background: linear-gradient(135deg, #004d40, #880e4f); /* Deep Sea Teal to Deep Rose */
       color: white;
-      padding: 25px 40px;
+      padding: 20px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .header-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .left-section {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
 
     .header-img {
-      width: 80px;
-      height: 80px;
+      width: 75px;
+      height: 75px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center 30%;
-      border: 3px solid white;
+      object-position: center 20%;
+      border: 3px solid #ffb6c1; /* Rose Gold Border */
+      box-shadow: 0 0 10px rgba(255,182,193,0.5);
     }
 
     h1 {
       margin: 0;
       font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
       color: white;
-      margin: 20 px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 15px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: #ffb6c1;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
       transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     nav a:hover {
-      color: yellow;
+      color: #ffb6c1;
     }
 
+    /* MAIN CONTENT */
     section {
-      padding: 40px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 850px;
       margin: auto;
     }
 
+    h2 {
+      border-bottom: 3px solid #00acc1;
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #004d40;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    /* DASHBOARD CARDS */
     .card {
-      background: rgb(113, 142, 163);
-      padding: 20px;
-      margin: 15px 0;
+      background: #455a64; /* Slate Blue-Grey */
+      color: #ffffff;
+      padding: 30px;
+      margin-bottom: 25px;
       border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      border-left: 6px solid #d50707db;
-      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-left: 8px solid #c62828; /* Deep Red Accent */
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      background: #37474f;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
 
-    h2 {
-      border-bottom: 3px solid #00bfff;
-      padding-bottom: 5px;
-      color: #200202;
+    .card p {
+      text-align: justify;
+      line-height: 1.7;
+      font-size: 16px;
+      margin: 0;
     }
 
+    h3 {
+      margin-top: 0;
+      color: #ffb6c1; /* Rose Gold Headings */
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* BUTTONS */
     a.button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: linear-gradient(135deg, #0993c1, #5d0534);
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #00acc1, #880e4f);
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
       transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     a.button:hover {
-      background: linear-gradient(135deg, #ff4d4d, #00bfff);
+      filter: brightness(1.2);
+      transform: scale(1.05);
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2ab1dd;
-      color: white;
-    }
-
+    /* LISTS */
     ul {
       line-height: 1.8;
+      padding-left: 20px;
+      list-style-type: square;
+    }
+
+    li b {
+      color: #ffb6c1;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #004d40;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 600px) {
+      .header-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        gap: 15px;
+        justify-content: center;
+      }
+      nav a {
+        font-size: 13px;
+      }
+      section {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
@@ -116,9 +203,8 @@
 
 <header>
   <div class="header-flex">
-
     <div class="left-section">
-      <img src="profile.jpg" class="header-img">
+      <img src="profile.jpg" class="header-img" alt="Lakshmi Profile">
       <h1>Lakshmi S D</h1>
     </div>
 
@@ -129,113 +215,81 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
 </header>
 
-<!-- About -->
 <section id="about">
   <h2>About Me</h2>
-
   <div class="card">
     <p>
-      Hello! I am Lakshmi, a student pursuing Artificial Intelligence & Data Science.
-      I am passionate about building projects using Python,MySQL, and web technologies.
+      Hello! I am <b>Lakshmi</b>, a dedicated student pursuing my degree in <b>Artificial Intelligence & Data Science</b>. 
+      I have a strong passion for exploring data-driven solutions and building interactive web applications. 
+      My core interests lie in Python programming, MySQL database management, and modern front-end technologies.
     </p>
   </div>
 </section>
 
-<!-- Education -->
 <section id="education">
   <h2>Education</h2>
-
   <div class="card">
     <ul>
       <li>
-        <b>Bachelor of Computer Science with Artificial Intelligence</b><br>
-        DRBCCC Hindu College<br>
-        Pursuing UG (2024 – 2027)
+        <b>Bachelor of Computer Science (AI & DS)</b><br>
+        DRBCCC Hindu College | 2024 – 2027
       </li>
-
       <br>
-
       <li>
-        <b>Higher Secondary (HSLC)</b><br>
+        <b>Higher Secondary Education (HSC)</b><br>
         Jaya Matriculation Higher Secondary School, Thiruninravur<br>
-        Bio-Maths Group<br>
-        Percentage: 70.17%
+        Bio-Maths Group | Percentage: 70.17%
       </li>
     </ul>
   </div>
 </section>
 
-<!-- Skills -->
 <section id="skills">
-  <h2>Skills</h2>
-
+  <h2>Technical Skills</h2>
   <div class="card">
-    <h3>Programming Languages:</h3>
+    <h3>Languages & Web</h3>
     <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>JavaScript</li>
+      <li>Python, Java, JavaScript</li>
+      <li>HTML5, CSS3 (Responsive Design)</li>
     </ul>
 
-    <h3>Web Technologies:</h3>
+    <h3>Data & Tools</h3>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-    </ul>
-
-    <h3>Databases:</h3>
-    <ul>
-      <li>MySQL</li>
-      <li>MongoDB</li>
-    </ul>
-
-    <h3>Libraries / Tools:</h3>
-    <ul>
-      <li>NumPy</li>
-      <li>Pandas</li>
-      <li>Matplotlib</li>
+      <li>MySQL, MongoDB</li>
+      <li>NumPy, Pandas, Matplotlib</li>
     </ul>
   </div>
 </section>
 
-<!-- Projects -->
 <section id="projects">
-  <h2>Projects</h2>
-
+  <h2>Featured Projects</h2>
+  
   <div class="card">
     <h3>E-commerce Data Analysis</h3>
-    <p>Data Analysis project using NumPy,Pandas,Matplotlib.</p>
-    <a class="button" href="https://github.com/laxsh041-ux/E-commerce-sales-analysis-" target="_blank">
-      View Project
-    </a>
+    <p>Comprehensive data analysis project focusing on sales trends and customer behavior using NumPy and Pandas.</p>
+    <a class="button" href="https://github.com/laxsh041-ux/E-commerce-sales-analysis-" target="_blank">View Repo</a>
   </div>
 
   <div class="card">
-    <h3>Google Colab Project</h3>
-    <p>Loan Approval Risk Analysis using Machine learning.</p>
-    <a class="button" href="https://colab.research.google.com/drive/1oS2eXrCTN1-jBfpdZTAYSee5hxaRxoN-?usp=sharing" target="_blank">
-      Open Colab
-    </a>
+    <h3>Loan Approval Risk Prediction</h3>
+    <p>Machine Learning model developed in Google Colab to predict loan eligibility based on applicant risk profiles.</p>
+    <a class="button" href="https://colab.research.google.com/drive/1oS2eXrCTN1-jBfpdZTAYSee5hxaRxoN-?usp=sharing" target="_blank">Open Colab</a>
   </div>
-
 </section>
 
-<!-- Contact -->
 <section id="contact">
-  <h2>Contact</h2>
-
+  <h2>Get In Touch</h2>
   <div class="card">
-    <p>Email: laxsh041@gmail.com</p>
-    <p>Phone: 7200265396</p>
+    <p>📧 Email: <a href="mailto:laxsh041@gmail.com" style="color:#ffb6c1; text-decoration:none;">laxsh041@gmail.com</a></p>
+    <p>📞 Phone: +91 72002 65396</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Lakshmi | All Rights Reserved</p>
+  <p>© 2026 Lakshmi S D | Built with Passion in AI & DS</p>
 </footer>
 
 </body>
